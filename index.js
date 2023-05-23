@@ -53,8 +53,8 @@ var linebot = require("linebot");
 
 // 用於辨識Line Channel的資訊
 var bot = linebot({
-  channelId: '1657915027',
-  channelSecret: 'e37597240c5bc02615c30c778b27ce08',
+  channelId: '1661169547',
+  channelSecret: 'aade486fd0d71f5adc399acf167e5b44',
   channelAccessToken: "5BlymjqpeWBFPiZTtoGI5ll839aCe3BOMfVIQ4OtbUoL5OK7t8tov8iwc6A8kU941q345xYoFYqtq1+OMwguJXSrRm+lIxwSWennYOqFuxPs1U/t50uOrAANS3PkpvJxiqKcLW6GJlWLaeeiMr4VEAdB04t89/1O/w1cDnyilFU=" //填入在Line developers得到的channelAccessToken
 });
 
