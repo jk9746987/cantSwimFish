@@ -55,43 +55,10 @@ var linebot = require("linebot");
 var bot = linebot({
   channelId: '1657915027',
   channelSecret: 'e37597240c5bc02615c30c778b27ce08',
-  channelAccessToken: "HDAZE4rUGDHSTS8G9mWOpCJUFQhcL5F3YP8mRxu4ciBXYfev6Sn/1MsPYgk1OHqIpmI6KzFZdByC3SuyRNk57Pi5R242aPubaqy2aDs7zCiMzl9qB1Rp0UK4vk7llAAulYuu1ntHurbsQ4y8JgpLUQdB04t89/1O/w1cDnyilFU=" //填入在Line developers得到的channelAccessToken
+  channelAccessToken: "5BlymjqpeWBFPiZTtoGI5ll839aCe3BOMfVIQ4OtbUoL5OK7t8tov8iwc6A8kU941q345xYoFYqtq1+OMwguJXSrRm+lIxwSWennYOqFuxPs1U/t50uOrAANS3PkpvJxiqKcLW6GJlWLaeeiMr4VEAdB04t89/1O/w1cDnyilFU=" //填入在Line developers得到的channelAccessToken
 });
-
-// let bot = linebot({
-//   channelId: process.env.channelId,
-//   channelSecret: process.env.channelSecret,
-//   channelAccessToken: process.env.channelAccessToken,
-// });
 
 const linebotParser = bot.parser();
-
-// 當有人傳送訊息給Bot時
-bot.on("message", function (event) {
-  const userText = event.message.text;
-  const bot = '@小烏丸';
-  const guild = '@宗族戰';
-  const nourish = '@培養';
-  const cooperate = '@合作';
-  const equipment = '@裝備';
-  switch(userText){
-    case bot:
-      event.reply('殺!!!\n可對我使用以下指令\n@宗族戰\n@培養\n@合作\n@裝備')
-      break;
-    case guild:
-      event.reply('https://hackmd.io/_seRSLOES5mABMQ8z3nxLQ?view')
-      break;
-    case nourish:
-      event.reply('https://hackmd.io/yAfn0VMfQTe9j95HWVc1MQ?view')
-      break;  
-    case cooperate:
-      event.reply('https://hackmd.io/JQ1-u0utQSmsVZGKaWuE_A?view')
-      break;
-    case equipment:
-      event.reply('https://hackmd.io/KBCOJN86Q-uEDvZgNpFDQQ?view')
-      break;
-  }
-});
 
 bot.on("memberJoined", function (event) {
   if(event.source.type === "group"){
@@ -101,26 +68,11 @@ bot.on("memberJoined", function (event) {
       let replyMsg = [
         {
           "type": "text",
-          "text": `${profile.displayName}\n歡迎加入沉睡森林\n請先閱讀沉睡森林指南\nhttps://hackmd.io/G1YZTdiOQZyd8ATiOFLfTA?view\n閱讀完後記得做入會簽到\n記事本有文章要簽到，如下圖`
-        },
-        {
-          "type": "image",
-          "originalContentUrl": "https://truth.bahamut.com.tw/s01/202302/201f28dba33a557d86e5260f6e280673.JPG",
-          "previewImageUrl": "https://truth.bahamut.com.tw/s01/202302/201f28dba33a557d86e5260f6e280673.JPG"
-        },
-        {
-          "type": "image",
-          "originalContentUrl": "https://truth.bahamut.com.tw/s01/202302/34a6b67e2e45620a37dbf68b9dd2e9e9.JPG",
-          "previewImageUrl": "https://truth.bahamut.com.tw/s01/202302/34a6b67e2e45620a37dbf68b9dd2e9e9.JPG"
-        },
-        {
-          "type": "image",
-          "originalContentUrl": "https://truth.bahamut.com.tw/s01/202302/d089ec95f7c1f67e277f091c35094174.JPG",
-          "previewImageUrl": "https://truth.bahamut.com.tw/s01/202302/d089ec95f7c1f67e277f091c35094174.JPG"
+          "text": `${profile.displayName}你好\n我們是宗族戰取向的公會\n如果你是新手，你願意花時間學，我們會撥時間教學。\n\n但是如果想休閒玩，我們宗族可能不適合加入。\n以下問題請依序照實回答\n1.這遊戲有課金嗎？目前大概花多少了？\n2.預計每個月花多少錢在遊戲上？\n3.每天玩遊戲的時數（小時）？\n4.宗族最低要求為聲望3\n宗族戰表現不好也不積極討論的話也會踢除\n以上。有問題請發問。`
         },
         {
           "type": "text",
-          "text": "以上三篇簽到後\n申請257733\n可輸入「@小烏丸」給我其它指示",
+          "text": `以上若是沒問題，麻煩到LINE的設定頁\n隱私設定>阻檔訊息打開\n方便邀請你入公會大群\n謝謝！`
         }
       ]
       client.replyMessage(event.replyToken, replyMsg)
