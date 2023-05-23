@@ -2,51 +2,12 @@
 const express = require("express");
 const line = require('@line/bot-sdk');
 const config = {
-  channelAccessToken: "HDAZE4rUGDHSTS8G9mWOpCJUFQhcL5F3YP8mRxu4ciBXYfev6Sn/1MsPYgk1OHqIpmI6KzFZdByC3SuyRNk57Pi5R242aPubaqy2aDs7zCiMzl9qB1Rp0UK4vk7llAAulYuu1ntHurbsQ4y8JgpLUQdB04t89/1O/w1cDnyilFU=", //填入在Line developers得到的channelAccessToken
-  channelSecret: 'e37597240c5bc02615c30c778b27ce08',
+  channelAccessToken: "5BlymjqpeWBFPiZTtoGI5ll839aCe3BOMfVIQ4OtbUoL5OK7t8tov8iwc6A8kU941q345xYoFYqtq1+OMwguJXSrRm+lIxwSWennYOqFuxPs1U/t50uOrAANS3PkpvJxiqKcLW6GJlWLaeeiMr4VEAdB04t89/1O/w1cDnyilFU=", //填入在Line developers得到的channelAccessToken
+  channelSecret: 'aade486fd0d71f5adc399acf167e5b44',
 }
 const client = new line.Client(config);
 // const crypto = require('crypto');
 const app = express();
-
-// const client = new line.Client({
-//   channelID: '1657915027', //填入在Line developers得到的channel ID
-//   channelSecret: 'e37597240c5bc02615c30c778b27ce08', //填入在Line developers得到的channelSecret金鑰
-//   channelAccessToken: "HDAZE4rUGDHSTS8G9mWOpCJUFQhcL5F3YP8mRxu4ciBXYfev6Sn/1MsPYgk1OHqIpmI6KzFZdByC3SuyRNk57Pi5R242aPubaqy2aDs7zCiMzl9qB1Rp0UK4vk7llAAulYuu1ntHurbsQ4y8JgpLUQdB04t89/1O/w1cDnyilFU=" //填入在Line developers得到的channelAccessToken
-// });
-
-// app.post('/webhook', line.middleware({ 
-//   channelID: '1657915027', //填入在Line developers得到的channel ID
-//   channelSecret: 'e37597240c5bc02615c30c778b27ce08', //填入在Line developers得到的channelSecret金鑰
-//   channelAccessToken: "HDAZE4rUGDHSTS8G9mWOpCJUFQhcL5F3YP8mRxu4ciBXYfev6Sn/1MsPYgk1OHqIpmI6KzFZdByC3SuyRNk57Pi5R242aPubaqy2aDs7zCiMzl9qB1Rp0UK4vk7llAAulYuu1ntHurbsQ4y8JgpLUQdB04t89/1O/w1cDnyilFU=" //填入在Line developers得到的channelAccessToken
-// }), (req, res) => {
-//   let signInKey = '';
-//   try {
-//     //產生對照組header
-//     signInKey = crypto.createHmac('sha256', your_channelSecret).
-//     update(Buffer.from(JSON.stringify(req.body)), 'utf8').digest('base64');
-//   } catch (e) {
-//     //產生失敗的處理
-//   }
-
-//   if(signInKey !== req.header('x-Line-Signature')){ 
-//     return res.send(error);
-//   }
-
-//   return res.json(handleEvent(req.body.events[0]));
-
-// });
-
-// function handleEvent(event) {
-//   let cReply = { //建立回應訊息
-//     type: 'text',  
-//     text: `你剛才說了"${event.message.text}"`
-//   };
-//   if (event.type !== 'message' || event.message.type !== 'text') {
-//     cReply.text = '拍謝，看不懂';
-//   }
-//   return client.replyMessage(event.replyToken, cReply);//回覆訊息
-// }
 
 // // 引用linebot SDK
 var linebot = require("linebot");
