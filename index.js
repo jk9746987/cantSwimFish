@@ -29,11 +29,16 @@ bot.on("memberJoined", function (event) {
       let replyMsg = [
         {
           "type": "text",
-          "text": `${profile.displayName}你好\n我們是宗族戰取向的公會\n如果你是新手，你願意花時間學，我們會撥時間教學。\n\n但是如果想休閒玩，我們宗族可能不適合加入。\n以下問題請依序照實回答\n1.這遊戲有課金嗎？目前大概花多少了？\n2.預計每個月花多少錢在遊戲上？\n3.每天玩遊戲的時數（小時）？\n4.宗族最低要求為聲望3\n宗族戰表現不好也不積極討論的話也會踢除\n以上。有問題請發問。`
+          "text": `${profile.displayName}你好\n我們是宗族戰取向的公會\n如果你是新手，你願意花時間學，我們會撥時間教學。\n\n但是如果想休閒玩，我們宗族可能不適合加入。\n以下問題請依序照實回答及PO範例上的截圖\n1.這遊戲有課金嗎？目前大概花多少了？\n2.預計每個月花多少錢在遊戲上？\n3.每天玩遊戲的時數（小時）？\n4.宗族最低要求為聲望3。`
+        },
+        {
+          "type": "image",
+          "originalContentUrl": "https://truth.bahamut.com.tw/s01/202305/88047ccdac9e4ae07c9f9139d08eb76d.JPG",
+          "previewImageUrl": "https://truth.bahamut.com.tw/s01/202305/88047ccdac9e4ae07c9f9139d08eb76d.JPG"
         },
         {
           "type": "text",
-          "text": `以上若是沒問題，麻煩到LINE的設定頁\n隱私設定>阻檔訊息打開\n方便邀請你入公會大群\n謝謝！`
+          "text": `需注意\n「宗族戰」表現不好也不積極討論的話也會踢除\n以上。有問題請發問以上若是沒問題，麻煩到LINE的設定頁\n隱私設定>阻檔訊息打開\n方便邀請你入公會大群\n謝謝！`
         }
       ]
       client.replyMessage(event.replyToken, replyMsg)
