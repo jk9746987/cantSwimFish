@@ -6,7 +6,6 @@ const config = {
   channelSecret: 'aade486fd0d71f5adc399acf167e5b44',
 }
 const client = new line.Client(config);
-// const crypto = require('crypto');
 const app = express();
 
 // // 引用linebot SDK
@@ -54,5 +53,9 @@ const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log("Express server start");
 });
+
+app.get('/', (req, res) => {
+  return res.json('line bot api').status(200)
+})
 
 module.exports = app
